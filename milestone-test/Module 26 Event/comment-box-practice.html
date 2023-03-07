@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment box paractice</title>
+  </head>
+  <body>
+    <section>
+      <div id="comment-box-container">
+        <h1>This is my Paragraph</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sapiente, numquam velit, commodi ad eveniet ipsum
+          quaerat nostrum expedita ullam pariatur dignissimos ipsam repudiandae incidunt totam corrupti possimus placeat non
+          voluptates accusantium minus sint consequatur quo! Adipisci aspernatur exercitationem incidunt necessitatibus et
+          doloribus doloremque ab cupiditate libero, voluptatibus porro ut nobis hic dolore repudiandae blanditiis iste
+          voluptatem neque minus laborum recusandae, numquam reiciendis eligendi! Tenetur vel eum, amet molestias non, saepe
+          facilis asperiores sunt quos minima explicabo modi ad magni mollitia dicta eveniet incidunt dolorem optio debitis
+          qui harum deleniti consequatur eligendi inventore? Iusto accusamus inventore provident in sit quibusdam asperiores
+          nobis architecto illo numquam beatae, iure officiis, magnam excepturi ullam odio fugiat quaerat error placeat
+          aliquid exercitationem nesciunt, dignissimos quisquam fuga! Laborum, nisi nemo dolore at fugiat id ipsa culpa
+          sapiente provident, quidem reiciendis voluptas quam voluptate illo pariatur temporibus quaerat quod animi. Odit
+          expedita culpa soluta similique, est saepe veniam mollitia. Aspernatur accusantium ab ut tempora doloremque,
+          adipisci praesentium molestias amet modi ea, delectus minus eveniet non vel reprehenderit labore pariatur fugiat
+          ducimus illo dolores! Corrupti labore tenetur a omnis perspiciatis, ab quod quam optio deserunt ex nulla et
+          assumenda harum ratione, dignissimos ipsam beatae at debitis asperiores, facere ipsum? Nemo dolorem eligendi esse
+          pariatur veritatis, ipsa eaque animi eos qui enim aperiam illum et natus corrupti sit laudantium sapiente eius iste
+          hic adipisci velit molestiae minus ab? Adipisci, sit aperiam nam deleniti dolores illo at id repudiandae natus
+          animi pariatur cumque ea, ab praesentium modi esse totam eligendi tenetur tempore eveniet a est. Eos iusto, dolor
+          fugit unde cumque aperiam neque. Itaque odio repellat animi impedit veniam, ullam quis debitis officia sit eveniet!
+          Voluptatibus blanditiis quisquam dolore facere eum veniam quia sequi doloribus! Distinctio, autem at exercitationem
+          quas error voluptatem culpa et sed suscipit expedita, facilis aliquam illo? Praesentium, quam! Non officia eos
+          omnis magni incidunt nisi ipsam maiores impedit velit, doloribus eaque, natus aperiam quae earum neque nostrum
+          ducimus assumenda dolore laborum? Consequatur provident aperiam hic enim dignissimos maiores ad. Quae harum tempora
+          nobis repellendus provident saepe? Sequi quaerat omnis saepe sit consequatur ipsa earum esse porro ducimus maxime
+          dolores corporis accusamus ab in, distinctio quam quia optio fugit harum architecto quos doloremque beatae nobis
+          debitis. Suscipit tempore at velit ipsam. Quibusdam, asperiores quam. Ipsum quos impedit eos at a ab similique
+          dignissimos, assumenda voluptatum rerum accusantium! Earum, voluptates quaerat ullam deserunt non corrupti at
+          voluptate, quo sed veniam itaque vel, tempora sapiente provident ratione. Facilis quasi quisquam odit soluta
+          delectus, accusamus aliquid, eum exercitationem qui officia magnam dolor harum voluptatibus totam nam nesciunt
+          laborum accusantium hic ad repudiandae obcaecati consequuntur laboriosam cum enim. Ducimus hic est voluptas in
+          aliquam magni itaque dolor perspiciatis quam ut esse quis commodi facere placeat enim architecto magnam, facilis
+          dolorum unde fugiat rerum? Deserunt ab vel repellendus ipsum fugit tempore quidem nobis quas quibusdam provident
+          debitis quod, a vero atque ipsam perferendis voluptas minima sed amet repudiandae facere non. Dolor magni minima,
+          illum corporis cum accusamus dignissimos id quasi porro?
+        </p>
+      </div>
+      <div>
+        <label for="">Please write your commnts....</label> <br />
+        <textarea name="" id="new-comment-box" cols="60" rows="5"></textarea> <br />
+        <button id="comment-submit-button">Submit Your Comments</button> <br />
+      </div>
+      <script>
+        document.getElementById("comment-submit-button").addEventListener("click", function () {
+          const commentBox = document.getElementById("new-comment-box");
+          const newCommet = commentBox.value;
+          const commentContainer = document.getElementById("comment-box-container");
+          const p = document.createElement("p");
+          p.innerText = newCommet;
+          commentContainer.appendChild(p);
+          commentBox.value = "";
+        });
+      </script>
+    </section>
+  </body>
+</html>

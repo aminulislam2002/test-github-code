@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubble</title>
+  </head>
+  <body>
+    <h3>Exploreing event bubble</h3>
+    <section id="list-container">
+      <ul id="ul-item">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">Aperiam, temporibus?</li>
+        <li id="item-3">Nobis, nesciunt.</li>
+        <li id="item-4">Excepturi, dolorem.</li>
+        <li id="item-5">Sit, nisi?</li>
+        <li id="item-6">Officiis, tempore?</li>
+      </ul>
+    </section>
+    <script>
+      document.getElementById("item-2").addEventListener("click", function (event) {
+        console.log("Item two checked");
+        event.stopImmediatePropagation();
+      });
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("Item two second checked");
+      });
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("Item two third checked");
+      });
+      document.getElementById("item-2").addEventListener("click", function () {
+        console.log("Item two four checked");
+      });
+      document.getElementById("ul-item").addEventListener("click", function () {
+        console.log("Item number ul");
+      });
+      document.getElementById("list-container").addEventListener("click", function () {
+        console.log("It is section checked");
+      });
+    </script>
+  </body>
+</html>

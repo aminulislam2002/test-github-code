@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summa event handler</title>
+  </head>
+  <body>
+    <h1>Explore dom event</h1>
+    <!-- Example 01 -->
+    <!-- Syestem 01 -->
+    <button onclick="makeGreen()">Make green</button>
+    <!-- Syestem 02 -->
+    <button id="make-red">Make red</button>
+    <!-- Example 02 -->
+    <input type="email" name="" id="user-email" />
+    <script>
+      // Example 01
+      // Syestem 01
+      function makeGreen() {
+        document.body.style.backgroundColor = "green";
+      }
+      //   Syestem 02
+      document.getElementById("make-red").addEventListener("click", function () {
+        document.body.style.backgroundColor = "red";
+      });
+      //   Example 02
+      document.getElementById("user-email").addEventListener("keyup", function (event) {
+        console.log(event.target.value);
+      });
+    </script>
+  </body>
+</html>

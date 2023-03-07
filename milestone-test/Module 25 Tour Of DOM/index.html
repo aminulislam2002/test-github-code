@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour of dom</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <head>
+      <h1>Welcome to dom</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nihil corrupti itaque, explicabo doloribus quibusdam
+        iusto consequatur optio at unde vel libero omnis porro earum fugiat rem quos nobis quas? Accusamus, obcaecati saepe
+        atque officia quibusdam quidem perferendis expedita repellat itaque nostrum, nulla architecto quae, recusandae eum
+        reprehenderit necessitatibus illo!
+      </p>
+      <main id="main-container">
+        <section>
+          <h1>Tour Of DOM</h1>
+          <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>there</li>
+          </ul>
+        </section>
+        <section class="fruits-container">
+          <h1 id="fruitsTitle">Fruits I like</h1>
+          <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Mango</li>
+          </ul>
+        </section>
+        <section id="places-container">
+          <h1>Places I like to visit</h1>
+          <ul id="visited-list">
+            <li class="visit">Dhaka</li>
+            <li class="visit">Barisal</li>
+            <li class="visit">Khulna</li>
+          </ul>
+        </section>
+      </main>
+    </head>
+    <script src="./js/dom.js"></script>
+    <script src="./js/append.js"></script>
+    <script src="./js/styleInJs.js"></script>
+    <script>
+      // HTML theke bivinno way te Element newar option
+      console.log("Inside the html");
+      // Option 01: document.getElementsByTagName()
+      const allHeadings = document.getElementsByTagName("h1");
+      for (const h1 of allHeadings) {
+        // console.log(h1);
+      }
+      // Option 02: document.getElemntById()
+      const anID = document.getElementById("fruitsTitle");
+      anID.innerText;
+      // Option 03: document.getElemntsByClassName()
+      const visited = document.getElementsByClassName("visit");
+      for (const visit of visited) {
+        // console.log(visit);
+      }
+      // Option 04: document.querySelector()
+      // Option 05: document.querySelectorAll()
+      const someLi = document.querySelectorAll(".fruits-container li");
+      for (li of someLi) {
+        // console.log(li);
+      }
+    </script>
+  </body>
+</html>

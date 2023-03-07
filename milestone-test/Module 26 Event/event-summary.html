@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Example 01 -->
+    <p id="input-text">Default input text</p>
+    <input id="input-fild" type="text" />
+    <button id="btn-update">Update!</button>
+
+    <!-- Example 02 -->
+
+    <h1>Finl DOM Event Handlers</h1>
+    <!-- Option 01 -->
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">Handle event by onclick function</button> <br />
+    <!-- Option 02 -->
+    <button id="event-listener">Handle event by addEventListener</button>
+    <script>
+      // Example 01
+      document.getElementById("btn-update").addEventListener("click", function () {
+        const inputFild = document.getElementById("input-fild");
+        const inputText = inputFild.value;
+        const p = document.getElementById("input-text");
+        p.innerText = inputText;
+        inputFild.value = "";
+      });
+
+      // Example 02
+      // option 01
+      function handleOnClick() {
+        const handlerStatus = document.getElementById("handler-status");
+        handlerStatus.innerText = "Handled by function atteched on click attribute";
+      }
+      //   Option 02
+      document.getElementById("event-listener").addEventListener("click", function () {
+        const handlerStatus = document.getElementById("handler-status");
+        handlerStatus.innerText = "Text updated by add event listenr button";
+      });
+    </script>
+  </body>
+</html>
